@@ -1,0 +1,406 @@
+/* Header */
+.header{
+    display: flex;
+    padding: 1em 0px 1em 0px;
+    /* gap: 500px; */
+
+    width: auto;
+    height: 105 px;
+
+    background: #F5C6EC;
+
+    /* Inside auto layout */
+
+    justify-content: space-between;
+    order: 0;
+    flex-grow: 0;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    width: 65%; 
+    justify-content: space-between;
+}
+
+.header2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 5px;
+}
+
+.logo{
+    width: 160px;
+    height: 90px;
+}
+
+.judul1{
+width: auto;
+height: 39px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 90px;
+line-height: 39px;
+text-align: center;
+font-weight: bold;
+color: #9A208C;
+}
+.judul2{
+width: 388px;
+height: 39px;
+padding-top: 10px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: bold;
+font-weight: 400;
+font-size: 25px;
+line-height: 39px;
+text-align: center;
+
+color: #000000;
+}
+/* navbar */
+.nav-item {
+    list-style: none;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    
+    width: auto;
+    height: auto;
+    
+    background: #9A208C;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+
+.button{
+    padding: 0px 0px;
+    width: fit-content;
+    display: flex;
+    color: inherit;
+    background-color: inherit;
+}
+
+.buttonin{
+  background-color: transparent;
+  overflow: hidden;
+  border: 0;
+  padding: 0px;
+  margin:0;
+  padding:0;
+  display: flex;
+}
+.navfont:hover{
+    color: white;
+}
+.navfont{
+width: 90px;
+height: 39px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 50px;
+text-align: center;
+
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+text-decoration: none;
+}
+
+/* Casurolll */
+.carousel-item{
+    background-color: #FFEAEA;
+    align-content: center;
+    width: 100%;
+    
+}
+.carousel-inner{
+    background-color: #FFEAEA;
+    align-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.carouselimg{
+    background-color: #FFEAEA;
+    align-content: center;
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+    
+}
+.carousel-itemactive{
+    background-color: #FFEAEA;
+    align-content: center;
+    width: 30%;
+    height: 50%;
+}
+
+.arrow1{
+    width: 5em;
+    height: 5em;
+    border: none;
+    background-color: transparent;
+}
+
+.arrow2{
+    width: 5em;
+    height: 5em;
+    transform: scaleX(-1);
+    border: none;
+    background-color: transparent;
+}
+
+.buton{
+    border: none;
+    background-color: transparent;   
+}
+/* Selamat Datang */
+
+.seldat{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+padding: 5px 0px;
+gap: 0px;
+
+width: 100%;
+height: 50%;
+
+background: #FFEAEA;
+
+
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.seldat1{
+    width: 100%;
+    height: 50%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 48px;
+text-align: center;
+
+color: #000000;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.seldat2{
+width: 100%;
+height: 50%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 121px;
+text-align: center;
+text-decoration-line: underline;
+color: #9A208C;
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.desc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 10px;
+    
+    width: 100%;
+    height: 50%;
+    
+    background: #FFEAEA;    
+    flex: none;
+    order: 4;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.desc1{
+    width: 299px;
+    height: 234.78px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;  
+}
+.desc2{
+width: 100%;
+height: 201px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+text-align: justify;
+display: flex;
+flex-direction: column;
+gap: 1em;
+color: #000000; 
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.desc2a{
+    width: 80%;
+    
+}
+
+/* Casurolll */
+
+.carousel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #FFEAEA;
+}
+
+.carousel{
+    display: flex;
+    width: 50%;
+    margin-top: 2rem;
+    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    min-width: 100%;
+    height: 30em;
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+    border: none    ;
+
+}
+.gamcar{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-container{
+    display: flex;
+    width: 50%;
+    /* overflow: auto; */
+    gap: 1rem;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.card-container{
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.card-container::-webkit-scrollbar{
+    display: none;  /* Safari and Chrome */
+}
+.arrow-btn{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    width: 2rem;
+    height: 2rem;
+    display: none;
+}
+.arrow-btn img{
+    height: 2rem;
+}
+.arrow-btn :hover{
+    cursor: pointer;
+}
+
+/* Form Register*/
+.cont{
+    width: 100%;
+    height: 50em;
+    background-color: #FFEAEA;
+    padding-top: 2em;
+}
+
+.card-header{
+    font-size: xx-large;
+    border: #000000;
+    color: #9A208C;
+    font-style: bold;
+    font-weight: bold;
+}
+
+.cardf{
+    justify-content: center;
+    width: 50%;
+    border-radius: 30px;
+    background-color: #FFEAEA;
+}
+
+/* Antrian*/
+.container{
+    padding-top: 2em;
+    background-color: #FFEAEA;
+}
+.antrian{
+    background-color: #FFEAEA; 
+    width: 100%;
+    height: 50em ;
+}
+/* sebelum checkout*/
+.div{
+    background-color: #FFEAEA; 
+    width: 100%;
+    height: 50em ;
+    padding-top: 2em;
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+    .judul1 {
+      font-size: 30px;
+      padding: 5px;
+    }
+  }
+  
+  /* Medium screens */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .judul1 {
+      font-size: 40px;
+      padding: 10px;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 992px) {
+    .judul1 {
+      font-size: 50px;
+      padding: 15px;
+    }
+  }
