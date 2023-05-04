@@ -20,7 +20,7 @@ use App\Http\Controllers\AntrianController;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('landingpage.landingpage');
 });
 
 Route::get('/testnavbar', function () {
