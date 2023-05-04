@@ -18,6 +18,7 @@ class CekLevel
         if (in_array($request->User()->level,$levels)){
             return $next($request);
         }
+        
         return redirect('/');
     }
 }

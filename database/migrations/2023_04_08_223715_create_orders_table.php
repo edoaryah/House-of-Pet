@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->id()->startingValue(2000);
+            $table->id()->startingValue(3000);
             //TAMBAHAN SERVICE_ID & NAMAHEWAN
             $table->foreignId('user_id');
             $table->foreignId('service_id');
