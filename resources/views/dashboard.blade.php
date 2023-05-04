@@ -27,6 +27,7 @@
 <!-- Selamat Datang -->
 <div class='seldat'>
   <div class='seldat1'>Selamat Datang Di</div>
+  <p>Hello World</p>
   <div class='seldat2'>HOUSE OF PET</div>
 </div>
 <!-- Deskripsi -->
