@@ -65,6 +65,7 @@
     <section id="hero-section">
         <div class="container">
             <div class="row">
+                <h1 class="display-4 text-white">edo isal</h1>
                 <h1 class="display-4 text-white">EDO</h1>
                 <h1 class="display-4 text-white">
                     Kami Siap Menjaga <br>
