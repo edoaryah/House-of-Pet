@@ -65,6 +65,7 @@
     <section id="hero-section">
         <div class="container">
             <div class="row">
+                <h1 class="display-4 text-white">HELLOO WORLD</h1>
                 <h1 class="display-4 text-white">
                     Kami Siap Menjaga <br>
                     Hewan Kesayangan Anda
@@ -138,7 +139,7 @@
         <div class="bgdokter">
             <div class="row text-center">
                 @if($dataAntrian = DB::table('antrians')->select('id')->count() == 0)
-                <h2 class="display-6 fw-bold"> Masih Kosong Segera Pesan !!! </h2>
+                <h2 class="display-6 fw-bold">Antrian Masih Kosong Segera Pesan !!! </h2>
                 @endif
                 @if($dataAntrian = DB::table('antrians')->select('id')->count() > 0)
                 <h2 class="display-6 fw-bold">Antrian Tersisa Hari ini : {{ 10 - $dataAntrian = DB::table('antrians')->select('id')->count(); }} </h2>
