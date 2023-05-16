@@ -14,13 +14,16 @@
           <th scope="col">Nama</th>
           <th scope="col">Status Antrian</th>
           <th scope="col">Hari Datang</th>
-          @if (auth())
-          @else if (auth()->user()->level=="admin")
+
+          @if (auth()->user()->level=="admin")
           <th scope="col">Edit</th>
           @endif
         </tr>
-
+      
       </thead>
+
+      <center><img src="/img/jampelayanan.png" alt="" style="padding-bottom: 1rem;"></center>
+
       <form action="/antrian" method="POST">
         @csrf
         <div class="form-group  col-sm-4">
@@ -42,7 +45,6 @@
           <td>{{ $an->status_antrian }}</td>
           <td>{{ $an->tanggal_Pesan ?? 'null'}}</td>
 
- 
           @if (auth()->user()->level=="admin")
           <td>
             <a href="/antrian/{{ $an->nomor_antrian }}/edit" class="btn btn-secondary">UBAH</a>

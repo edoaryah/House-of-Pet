@@ -26,7 +26,7 @@ class InvoiceController extends Controller
     {
         $dataAntrian = DB::table('antrians')->select('id')->count();
         $dataAntrianBaru = $dataAntrian + 1; 
-        $databarubaru = $dataAntrianBaru + 3000 - 1;
+        $databarubaru = $dataAntrianBaru + 12000 - 1;
         // $tanggalNow = Carbon::now()->format('Y/m/d');
         // @dd($tanggalNow); 
         $newDate = Carbon::now()->addDays(1)->format('Y/m/d');
@@ -34,20 +34,23 @@ class InvoiceController extends Controller
         // @dd($newDate);
         
 
-        if($dataAntrianBaru > 10){
+        if($dataAntrianBaru > 2){
+            $a = $dataAntrianBaru - 2;
+
             Antrian::create([
-                'nomor_antrian' => $dataAntrianBaru,
+                'nomor_antrian' => $a,
                 'user_id' => request('user_id'),
                 'pembayaran_id' => request('pembayaran_id'),
                 'status_antrian' => 'TUNGGU',
             ]);
             
             // $data = DB::table('orders')->where('id','=',$dataAntrianBaru)->get();
+            // @dd($newDate);
             $data = Order::find($databarubaru);
             $data->tanggal_Pesan = $newDate;
             $data->save();
 
-        }elseif($dataAntrianBaru <= 10){
+        }elseif($dataAntrianBaru <= 2){
             Antrian::create([
                 'nomor_antrian' => $dataAntrianBaru,
                 'user_id' => request('user_id'),

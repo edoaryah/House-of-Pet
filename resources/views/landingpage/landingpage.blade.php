@@ -7,13 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/landingpage.css">
     <link href="https://fonts.cdnfonts.com/css/maleantes-tres-d" rel="stylesheet">
-    <title>Landing Page</title>
+    <title>House of Pet | Home</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="assets/img/logo.png" width="100">
             </a>
             <h2 class="header1 mt-2">House of Pet</h2>
@@ -41,9 +41,9 @@
                     <a id="navbarDropdown" class="navfont" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
-                    <a id="navbarDropdown" class="navfont" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <!-- <a id="navbarDropdown" class="navfont" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
-                    </a>
+                    </a> -->
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -74,8 +74,8 @@
                     consectetur, adipisci velit...
                 </p>
                 <div class="d-flex gap-3 mt-2 mt-lg-4">
-                    <a href="/sebelumcheckout" class="btn bg-violet text-white rounded-pill px-4 shadow">Reservasi</a>
-                    <a href="#" class="btn border-violet text-white rounded-pill px-4 shadow">Lihat Layanan</a>
+                    <a href="/sebelumcheckout" class="btn bg-violet text-white rounded-pill px-4 shadow">Reservasi Grooming</a>
+                    <a href="#" class="btn border-violet text-white rounded-pill px-4 shadow">Detail Layanan</a>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
                 <!-- 1 -->
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="d-flex flex-row flex-lg-column">
-                        <img src="assets/img/valuesimg.jpg" class="col-4 rounded-3" />
+                        <img src="assets/img/layanan1.png" class="col-4 rounded-3" />
                         <div class="d-flex flex-column col-8 ms-3 ms-lg-0 detail mt-3 mt-md-0">
                             <h5 class="mt-lg-3">Pet Shop</h5>
                             <p class="mt-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices.</p>
@@ -99,7 +99,7 @@
                 <!-- 2 -->
                 <div class="col-12 col-md-6 col-lg-3 gap-3">
                     <div class="d-flex flex-row-reverse flex-md-row flex-lg-column">
-                        <img src="assets/img/valuesimg.jpg" class="col-4 rounded-3" />
+                        <img src="assets/img/layanan2.png" class="col-4 rounded-3" />
                         <div class="d-flex flex-column col-8 ms-3 ms-lg-0 detail mt-3 mt-md-0">
                             <h5 class="mt-lg-3">Veterinary Service</h5>
                             <p class="mt-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices.</p>
@@ -110,7 +110,7 @@
                 <!-- 3 -->
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="d-flex flex-row flex-lg-column">
-                        <img src="assets/img/valuesimg.jpg" class="col-4 rounded-3" />
+                        <img src="assets/img/layanan3.png" class="col-4 rounded-3" />
                         <div class="d-flex flex-column col-8 ms-3 ms-lg-0 detail mt-3 mt-md-0">
                             <h5 class="mt-lg-3">Pet Hotel</h5>
                             <p class="mt-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices.</p>
@@ -121,7 +121,7 @@
                 <!-- 4 -->
                 <div class="col-12 col-md-6 col-lg-3 gap-3">
                     <div class="d-flex flex-row-reverse flex-md-row flex-lg-column">
-                        <img src="assets/img/valuesimg.jpg" class="col-4 rounded-3" />
+                        <img src="assets/img/layanan4.png" class="col-4 rounded-3" />
                         <div class="d-flex flex-column col-8 ms-3 ms-lg-0 detail mt-3 mt-md-0">
                             <h5 class="mt-lg-3">Grooming</h5>
                             <p class="mt-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices.</p>
@@ -133,23 +133,32 @@
         </div>
     </section>
 
-    <!-- awards -->
+    <!-- doctors -->
     <section id="awards" class="bg-light">
-        <div class="container">
+        <div class="bgdokter">
             <div class="row text-center">
-                <h2 class="display-6 fw-bold">Penghargaan</h2>
+                @if($dataAntrian = DB::table('antrians')->select('id')->count() == 0)
+                <h2 class="display-6 fw-bold">Antrian Masih Kosong Segera Pesan !!! </h2>
+                @endif
+                @if($dataAntrian = DB::table('antrians')->select('id')->count() > 0)
+                <h2 class="display-6 fw-bold">Antrian Tersisa Hari ini : {{ 10 - $dataAntrian = DB::table('antrians')->select('id')->count(); }} </h2>
+                @endif
+                @if($dataAntrian = DB::table('antrians')->select('id')->count() == 2)
+                <h2 class="display-6 fw-bold">Antrian Hari ini sudah Full</h2>
+                @endif
+                <h2 class="display-6 fw-bold">Meet Our Doctors</h2>
                 <div class="row text-center mt-5">
                     <div class="col-md-4">
-                        <img src="assets/img/valuesimg.jpg" class="awards">
-                        <h4 class="mt-4">Top Brands 2016-2020</h4>
+                        <img src="assets/img/dokter-11.png" class="awards">
+                        <!-- <h4 class="mt-4">Drh. Niki</h4> -->
                     </div>
                     <div class="col-md-4">
-                        <img src="assets/img/valuesimg.jpg" class="awards">
-                        <h4 class="mt-4">Popular Brands Award 2016-2020</h4>
+                        <img src="assets/img/dokter-22.png" class="awards">
+                        <!-- <h4 class="mt-4">Drh. Deasy</h4> -->
                     </div>
                     <div class="col-md-4">
-                        <img src="assets/img/valuesimg.jpg" class="awards">
-                        <h4 class="mt-4">Top Inovation 2016-2020</h4>
+                        <img src="assets/img/dokter-33.png" class="awards">
+                        <!-- <h4 class="mt-4">Drh. Pascara</h4> -->
                     </div>
                 </div>
             </div>
@@ -160,15 +169,15 @@
     <section id="buy">
         <div class="container">
             <div class="row text-center">
-                <h2 class="display-6">Tersedia di</h2>
+                <h2 class="display-6">Produk Kami Tersedia di</h2>
             </div>
             <div class="row mt-4">
                 <div class="d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row links">
                     <a href="" class="btn bg-violet text-white px-5">Tokopedia</a>
                     <a href="" class="btn bg-violet text-white px-5">Bukalapak</a>
                     <a href="" class="btn bg-violet text-white px-5">Shopee</a>
-                    <a href="" class="btn bg-violet text-white px-5 mt-0 mt-md-4 mt-lg-0">Lazada</a>
-                    <a href="" class="btn bg-violet text-white px-5 mt-0 mt-md-4 mt-lg-0">Blibi</a>
+                    <a href="" class="btn bg-violet text-white px-5 mt-0 mt-md-4 mt-lg-0">Tiktok Shop</a>
+                    <a href="" class="btn bg-violet text-white px-5 mt-0 mt-md-4 mt-lg-0">Petshop Indonesia</a>
                 </div>
             </div>
         </div>
@@ -179,32 +188,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-6">
-                    <a href="#" class="d-block mb-3">
+                    <!-- <a href="#" class="d-block mb-3">
                         <img src="assets/img/logo.png" width="150">
-                    </a>
+                    </a> -->
                     <ul class="list-unstyled">
-                        <li>Alamat : Jl. Soekarno Hatta</li>
-                        <li>Kota : Jl. Malang</li>
-                        <li>Kode : 65144</li>
-                        <li>Telp. : 0341</li>
+                        <li>Alamat : Jl. Soekarno Hatta, Ruko SBC Kav-22</li>
+                        <li>Kota : Malang</li>
+                        <li>Kode : 65141</li>
+                        <li>Telepon : 0341-362101</li>
                     </ul>
                     <div class="flex gap-2">
-                        <a href="">
-                            <img src="assets/img/facebook.png" class="sosmed-icon">
-                        </a>
-                        <a href="">
-                            <img src="assets/img/instagram.png" class="sosmed-icon">
-                        </a>
+                        <a href="https://www.facebook.com/houseofpetmalang/?locale=id_ID"><img src="assets/img/facebook.png" class="sosmed-icon"></a>
+                        <a href="https://www.instagram.com/houseofpetmalang/?hl=en"><img src="assets/img/instagram.png" class="sosmed-icon"></a>
+                        <a href="https://api.whatsapp.com/send/?phone=62816559168&text&type=phone_number&app_absent=0"><img src="assets/img/whatsapp.png" class="sosmed-icon"></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3 mt-md-0">
-                    <h3 class="mb-2 text-darkviolet">Produk</h3>
+                    <h3 class="mb-2 text-darkviolet">Layanan</h3>
                     <ul class="list-unstyled">
-                        <li><a href="" class="text-decoration-none">Promo</a></li>
-                        <li><a href="" class="text-decoration-none">Produk Baru</a></li>
-                        <li><a href="" class="text-decoration-none">Kategori 1</a></li>
-                        <li><a href="" class="text-decoration-none">Kategori 2</a></li>
-                        <li><a href="" class="text-decoration-none">Kategori 3</a></li>
+                        <li><a href="" class="text-decoration-none">Pet Shop</a></li>
+                        <li><a href="" class="text-decoration-none">Dokter Hewan</a></li>
+                        <li><a href="" class="text-decoration-none">Pet Hotel</a></li>
+                        <li><a href="" class="text-decoration-none">Grooming</a></li>
+                        <li><a href="" class="text-decoration-none">Home Service</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-lg-3 mt-md-0">
@@ -214,7 +220,7 @@
                         <li><a href="" class="text-decoration-none">Contact us</a></li>
                         <li><a href="" class="text-decoration-none">Lowongan</a></li>
                         <li><a href="" class="text-decoration-none">Blog</a></li>
-                        <li><a href="" class="text-decoration-none">Kebijakan Privacy</a></li>
+                        <li><a href="" class="text-decoration-none">Kebijakan Privasi</a></li>
                     </ul>
                 </div>
             </div>
@@ -222,7 +228,7 @@
     </section>
 
     <footer class="py-3 px-4 px-md-0 bg-darkviolet">
-        <p class="text-white text-center">&copy: 2019-2023 Edo Arya Hermawan. Alright reserved</p>
+        <p class="text-white text-center">&copy: 2019-2023 House of Pet. Alright reserved</p>
     </footer>
 
     <a href="" id="backtotop" class="btn position-fixed">
