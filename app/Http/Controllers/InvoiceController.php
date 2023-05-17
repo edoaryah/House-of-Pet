@@ -34,8 +34,8 @@ class InvoiceController extends Controller
         // @dd($newDate);
         
 
-        if($dataAntrianBaru > 2){
-            $a = $dataAntrianBaru - 2;
+        if($dataAntrianBaru > 10){
+            $a = $dataAntrianBaru - 10;
 
             Antrian::create([
                 'nomor_antrian' => $a,
@@ -50,7 +50,7 @@ class InvoiceController extends Controller
             $data->tanggal_Pesan = $newDate;
             $data->save();
 
-        }elseif($dataAntrianBaru <= 2){
+        }elseif($dataAntrianBaru <= 10){
             Antrian::create([
                 'nomor_antrian' => $dataAntrianBaru,
                 'user_id' => request('user_id'),
