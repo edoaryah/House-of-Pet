@@ -65,7 +65,7 @@
     <section id="hero-section">
         <div class="container">
             <div class="row">
-                <h1 class="display-4 text-white">FIXXXXX</h1>
+                <h1 class="display-4 text-white">COBA GANTI FIXXXXX</h1>
                 <h1 class="display-4 text-white">
                     Kami Siap Menjaga <br>
                     Hewan Kesayangan Anda
