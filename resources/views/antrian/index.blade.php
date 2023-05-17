@@ -14,10 +14,13 @@
           <th scope="col">Nama</th>
           <th scope="col">Status Antrian</th>
           <th scope="col">Hari Datang</th>
-
+          
+          @auth
           @if (auth()->user()->level=="admin")
           <th scope="col">Edit</th>
           @endif
+          @endauth
+          
         </tr>
       
       </thead>
@@ -45,6 +48,7 @@
           <td>{{ $an->status_antrian }}</td>
           <td>{{ $an->tanggal_Pesan ?? 'null'}}</td>
 
+          @auth
           @if (auth()->user()->level=="admin")
           <td>
             <a href="/antrian/{{ $an->nomor_antrian }}/edit" class="btn btn-secondary">UBAH</a>
@@ -55,6 +59,7 @@
             </form>
           </td>
           @endif
+          @endauth
         </tr>
       </tbody>
       @endforeach

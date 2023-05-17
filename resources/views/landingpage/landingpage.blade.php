@@ -144,7 +144,7 @@
                 @if($dataAntrian = DB::table('antrians')->select('id')->count() > 0)
                 <h2 class="display-6 fw-bold">Antrian Tersisa Hari ini : {{ 10 - $dataAntrian = DB::table('antrians')->select('id')->count(); }} </h2>
                 @endif
-                @if($dataAntrian = DB::table('antrians')->select('id')->count() == 2)
+                @if($dataAntrian = DB::table('antrians')->select('id')->count() == 10)
                 <h2 class="display-6 fw-bold">Antrian Hari ini sudah Full</h2>
                 @endif
                 <h2 class="display-6 fw-bold">Meet Our Doctors</h2>
