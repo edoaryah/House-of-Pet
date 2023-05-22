@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/landingpage.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.cdnfonts.com/css/maleantes-tres-d" rel="stylesheet">
     <title>House of Pet | Home</title>
 </head>
@@ -81,10 +81,32 @@
         </div>
     </section>
 
+    <!-- antrian -->
+    <section id="queue">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    @if($dataAntrian = DB::table('antrians')->select('id')->count() == 0)
+                    <h2 class="display-6 fw-bold">Antrian Masih Kosong Segera Pesan !!! </h2>
+                    @endif
+                    @if($dataAntrian = DB::table('antrians')->select('id')->count() > 0)
+                    <h2 class="display-6 fw-bold">Antrian Tersisa Hari ini : {{ 10 - $dataAntrian = DB::table('antrians')->select('id')->count(); }} </h2>
+                    @endif
+                    @if($dataAntrian = DB::table('antrians')->select('id')->count() == 10)
+                    <h2 class="display-6 fw-bold">Antrian Hari ini sudah Full</h2>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- values products -->
     <section id="values-products">
         <div class="container">
             <div class="row">
+                <div class="judul text-center">
+                    <h2 class="display-6 fw-bold">Our Services</h2>
+                </div>
                 <!-- 1 -->
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="d-flex flex-row flex-lg-column">
@@ -137,7 +159,7 @@
     <section id="awards" class="bg-light">
         <div class="bgdokter">
             <div class="row text-center">
-                @if($dataAntrian = DB::table('antrians')->select('id')->count() == 0)
+                <!-- @if($dataAntrian = DB::table('antrians')->select('id')->count() == 0)
                 <h2 class="display-6 fw-bold">Antrian Masih Kosong Segera Pesan !!! </h2>
                 @endif
                 @if($dataAntrian = DB::table('antrians')->select('id')->count() > 0)
@@ -145,7 +167,7 @@
                 @endif
                 @if($dataAntrian = DB::table('antrians')->select('id')->count() == 10)
                 <h2 class="display-6 fw-bold">Antrian Hari ini sudah Full</h2>
-                @endif
+                @endif -->
                 <h2 class="display-6 fw-bold">Meet Our Doctors</h2>
                 <div class="row text-center mt-5">
                     <div class="col-md-4">
@@ -165,8 +187,49 @@
         </div>
     </section>
 
+    <!-- why -->
+    <section id="why">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>Kenapa Harus di House of Pet?</h2>
+                    <span class="sub-title">Pethouse impian hewan peliharaan anda</span>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 text-center">
+                    <div class="card-layanan">
+                        <div class="circle-icon position-relative mx-auto">
+                            <img src="assets/img/award.png" alt="" class="position-absolute top-50 start-50 translate-middle">
+                        </div>
+                        <h3 class="mt-4">Profesional</h3>
+                        <p class="mt-3">Semua Groomer di House of Pet mempunyai pengalaman & standar prosedur terbaik dalam melayani grooming anabul kesayangan kamu</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card-layanan">
+                        <div class="circle-icon position-relative mx-auto">
+                            <img src="assets/img/shield.png" alt="" class="position-absolute top-50 start-50 translate-middle">
+                        </div>
+                        <h3 class="mt-4">Produk Aman</h3>
+                        <p class="mt-3">Semua Groomer di House of Pet mempunyai pengalaman & standar prosedur terbaik dalam melayani grooming anabul kesayangan kamu</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card-layanan">
+                        <div class="circle-icon position-relative mx-auto">
+                            <img src="assets/img/thumb-up.png" alt="" class="position-absolute top-50 start-50 translate-middle">
+                        </div>
+                        <h3 class="mt-4">Nyaman</h3>
+                        <p class="mt-3">Semua Groomer di House of Pet mempunyai pengalaman & standar prosedur terbaik dalam melayani grooming anabul kesayangan kamu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- buy -->
-    <section id="buy">
+    <!-- <section id="buy">
         <div class="container">
             <div class="row text-center">
                 <h2 class="display-6">Produk Kami Tersedia di</h2>
@@ -181,7 +244,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- footer -->
     <section id="footer" class="py-4">
@@ -240,5 +303,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
+
+<style>
+    /* script menghilangkan Horizontal Scroll */
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .paragraph {
+        width: 150%;
+    }
+</style>
 
 </html>

@@ -1,6 +1,11 @@
 :root {
     --violet: rgba(138, 43, 226, 1);
     --dark-violet: indigo;
+
+    --pink: #F5C6EC;
+    --hotpink: #E11299;
+    --purple: #9A208C;
+    --cream: #FFEAEA;
 }
 
 .header1 {
@@ -76,6 +81,11 @@ a.border-violet:hover {
 }
 
 /* values products */
+
+#values-products {
+    background-color: #FFEAEA;
+}
+
 #values-products .row, #awards .row {
     row-gap: 3rem;
 }
@@ -86,9 +96,9 @@ a.border-violet:hover {
 }
 
 /* buy */
-#buy .links {
+/* #buy .links {
     column-gap: 2rem;
-}
+} */
 
 /* footer */
 #footer {
@@ -112,6 +122,81 @@ footer a{
     z-index: 99;
     bottom: 150px;
     right: 30px;
+}
+
+/* why */
+#why {
+    padding: 100px 0;
+    background-color: #F5C6EC;
+}
+
+#why h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #9A208C;
+}
+
+#why .sub-title {
+    font-size: 18px;
+    color: black;
+}
+
+#why .card-layanan {
+    width: 100%;
+    height: 313px;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+    transition: all .2s ease-in;
+}
+
+#why .circle-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #E11299;
+    border-radius: 50%;
+    transition: all .2s ease-in;
+}
+
+#why .card-layanan h3 {
+    color: #E11299;
+    font-size: 24px;
+    transition: all .2s ease-in;
+}
+
+#why .card-layanan p {
+    color: #000;
+    font-size: 14px;
+    transition: all .2s ease-in;
+}
+
+/* hover why */
+#why .card-layanan:hover {
+    width: 100%;
+    height: 313px;
+    border-radius: 5px;
+    background : linear-gradient(160deg, #E11299, #000);
+    padding: 40px;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+    transition: all .2s ease-in;
+}
+
+#why .card-layanan:hover .circle-icon {
+    background-color: #fff;
+    transition: all .2s ease-in;
+}
+
+#why .card-layanan:hover h3 {
+    color: #fff;
+    font-size: 24px;
+    transition: all .2s ease-in;
+}
+
+#why .card-layanan:hover p {
+    color: #fff;
+    font-size: 14px;
+    transition: all .2s ease-in;
 }
 
 /* mobile */

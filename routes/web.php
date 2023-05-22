@@ -20,11 +20,16 @@ use App\Http\Controllers\AntrianController;
 */
 
 Route::get('/', function () {
-    return view('landingpage.landingpage');
+    return view('home');
 });
 
 Route::get('/testnavbar', function () {
     return view('layouts.navbar');
+});
+
+//test doang
+Route::get('/test', function () {
+    return view('home');
 });
 
 // Route::get('/sebelumcheckout', [OrderController::class, 'index'])->middleware('auth');

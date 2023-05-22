@@ -1,6 +1,6 @@
-@extends('layouts.navigation')
+@extends('layouts.main')
 
-@section('content')
+@section('container')
 <div class="cont">
     <div class="row justify-content-center">
         <div class="cardf">
