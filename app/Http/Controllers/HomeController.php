@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\UlasanController;
 
 use Illuminate\Http\Request;
 
@@ -21,12 +22,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
+        $komen = [UlasanController::class,'readUlasanCsv'];
         return redirect()->intended('/');
     }
 
     public function testnavbar(){
         return view('layouts.navbar');
     }
+
+    
 }
