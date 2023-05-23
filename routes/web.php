@@ -8,6 +8,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UlasanController;
 use App\Http\Controllers\AntrianController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,8 @@ Route::get('/ulasan', [UlasanController::class,'readUlasanCsv']);
 // Route::get('/testnavbar', function () {
 //     return view('layouts.navbar');
 // });
+
+
 
 //tombol setelah invoice
 Route::post('/setelahinvoice', [InvoiceController::class, 'push']);
@@ -60,3 +63,5 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
 // Route::get('/sebelumcheckout', [OrderController::class, 'index'])->middleware('auth');
 // Route::post('/order', [OrderController::class, 'order'])->middleware('auth');
 // Route::get('/invoice/{id}', [OrderController::class, 'invoice'])->middleware('auth');
+
+Route::get('/forum', [PostsController::class, 'index']);
