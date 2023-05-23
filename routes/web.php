@@ -23,6 +23,9 @@ use App\Http\Controllers\PostsController;
 
 Route::get('/ulasan', [UlasanController::class,'readUlasanCsv']);
 
+Route::get('/about', function () {
+    return view('about');
+});
 
 Route::get('/', function () {
     return view('home');

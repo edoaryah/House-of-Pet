@@ -35,7 +35,7 @@
                         <a href="/sebelumcheckout">Layanan</a>
                         <a href="/antrian">Antrian</a>
                         <a href="/invoice">Invoice</a>
-                        <a href="#">About</a>
+                        <a href="/about">About</a>
 
                         @guest
                         @if (Route::has('login'))
