@@ -69,3 +69,8 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
 // Route::get('/invoice/{id}', [OrderController::class, 'invoice'])->middleware('auth');
 
 Route::get('/forum', [PostsController::class, 'index']);
+Route::get('/post/new', [PostsController::class, 'create']);
+Route::get('/post/{post}', [PostsController::class, 'show']);
+Route::post('/post', [PostsController::class, 'store']);
+Route::post('/post/{post}/comments', [CommentsController::class, 'store']);
+Route::delete('/comments/{comment}', [CommentsController::class, 'destroy']);

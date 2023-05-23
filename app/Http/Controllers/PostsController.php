@@ -18,7 +18,7 @@ class PostsController extends Controller
 
     public function show(Post $post): View
     {
-        return view('posts.show', [
+        return view('post.show', [
             'post'     => $post,
             'comments' => $post->comments()->paginate(5)
         ]);
@@ -26,7 +26,7 @@ class PostsController extends Controller
 
     public function create(): View
     {
-        return view('posts.create');
+        return view('post.create');
     }
 
     public function store(PostsRequest $request)
@@ -38,6 +38,6 @@ class PostsController extends Controller
         $post->text  = $data['text'];
         $post->save();
 
-        return redirect('/posts/'.$post->id);
+        return redirect('/post/'.$post->id);
     }
 }
