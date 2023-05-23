@@ -25,7 +25,7 @@
                     <div class="col-md-6">
                         <p><strong>Nama Pelanggan:</strong> {{ Auth::user()->name }}</p>
                         <p><strong>Email:</strong> {{ Auth::user()->email }} </p>
-                        <p><strong>Tanggal:</strong> {{$order->namahewan}} </p>
+                        <p><strong>Nama Hewan:</strong> {{$order->namahewan}} </p>
                         <p><strong>Tanggal:</strong> {{$order->tanggal_Pesan}} </p>
                     </div>
                 </div>

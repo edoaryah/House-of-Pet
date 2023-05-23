@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="service_id" class="form-label">Paket Layanan</label>
-                                        <select class="form-select" name="service_id" required>
+                                        <select class="form-select" name="service_id" >
                                             <option value="">-- Pilih paket layanan grooming --</option>
                                             @foreach ($services as $service)
                                             <option value="{{ $service->id }}" price="{{ $service->harga }}">{{ $service->paket}} - Rp {{ $service->harga }}</option>

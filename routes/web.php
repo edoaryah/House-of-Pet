@@ -20,16 +20,15 @@ use App\Http\Controllers\InvoiceController;
 |
 */
 
-Route::get('/ulasan', [UlasanController::class,'readUlasanCsv']);
-
-
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/testnavbar', function () {
-    return view('layouts.navbar');
-});
+Route::get('/ulasan', [UlasanController::class,'readUlasanCsv']);
+
+// Route::get('/testnavbar', function () {
+//     return view('layouts.navbar');
+// });
 
 //tombol setelah invoice
 Route::post('/setelahinvoice', [InvoiceController::class, 'push']);
@@ -43,10 +42,10 @@ Route::put('/antrian/{id}', [AntrianController::class, 'update']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
 Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
 
     Route::get('/sebelumcheckout', [OrderController::class, 'index']);
+    // Route::post('/sebelumcheckout', [OrderController::class, 'index']);
     Route::post('/order', [OrderController::class, 'order']);
     Route::get('/invoice', [InvoiceController::class, 'index']);
     Route::get('/invoice/{id}', [OrderController::class, 'invoice']);

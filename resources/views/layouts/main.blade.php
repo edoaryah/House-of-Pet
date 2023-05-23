@@ -35,6 +35,7 @@
                         <a href="/sebelumcheckout">Layanan</a>
                         <a href="/antrian">Antrian</a>
                         <a href="/invoice">Invoice</a>
+                        <a href="/ulasan">Ulasan</a>
                         <a href="#">About</a>
 
                         @guest

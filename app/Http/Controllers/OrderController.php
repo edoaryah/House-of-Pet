@@ -15,15 +15,24 @@ class OrderController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+
+    public function index()
     {
         //TAMBAHAN
+        // $servicekucing = DB::table('services')
+        // ->where('jenisHewan','=','kucing')->get();
+
+        // $serviceanjing = DB::table('services')
+        // ->where('jenisHewan','=','anjing')->get();
+
         return view('sebelumcheckout', [
              'services' => Service::all()
         ]);
 
-        // $data = Service::with(['service'])->get();
-        // return view('sebelumcheckout', compact('data'));
+            // return view('sebelumcheckout', compact('servicekucing','serviceanjing'));
+
+        $data = Service::with(['service'])->get();
+        return view('sebelumcheckout', compact('data'));
     }
 
 
