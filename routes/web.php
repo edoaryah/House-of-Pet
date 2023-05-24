@@ -5,10 +5,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UlasanController;
 use App\Http\Controllers\AntrianController;
 use App\Http\Controllers\InvoiceController;
-use App\Http\Controllers\PostsController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +53,6 @@ Route::put('/antrian/{id}', [AntrianController::class, 'update']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
-
     Route::get('/sebelumcheckout', [OrderController::class, 'index']);
     // Route::post('/sebelumcheckout', [OrderController::class, 'index']);
     Route::post('/order', [OrderController::class, 'order']);
@@ -61,7 +61,8 @@ Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
 });
 
 Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
-
+    Route::get('/tambah', [KategoriController::class, 'index']);
+    Route::post('/tambah', [KategoriController::class, 'makeKategori']);
     Route::get('/antrian/{id}/edit', [AntrianController::class, 'edit']);
 });
 

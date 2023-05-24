@@ -111,6 +111,7 @@ class OrderController extends Controller
         return view('invoice', compact('order','idOrder'));
     }
 
+
         /**
      * Show the form for creating a new resource.
      */

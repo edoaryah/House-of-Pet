@@ -32,9 +32,19 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto d-flex gap-4">
                         <a href="/">Home</a>
+                        @auth
+                        @if (auth()->user()->level=="user")
                         <a href="/sebelumcheckout">Layanan</a>
+                        @elseif (auth()->user()->level=="admin")
+                        <a href="/tambah">Layanan</a>
+                        @endif
+                        @endauth
                         <a href="/antrian">Antrian</a>
+                        @auth
+                        @if (auth()->user()->level=="user")
                         <a href="/invoice">Invoice</a>
+                        @endif
+                        @endauth
                         <a href="/about">About</a>
 
                         @guest

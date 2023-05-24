@@ -2,6 +2,8 @@
 
 @section('container')
 
+@auth
+@if (auth()->user()->level=="user")
 <div class="div">
     <div class="row mt-3">
         <div class="col-md-6 mx-auto">
@@ -77,8 +79,38 @@
             nextDay.setDate(nextDay.getDate() + 1);
             inputTanggal.value = nextDay.toISOString().substring(0, 10);
         });
-    </script>
+    </script>  
 </div>
+@endif
+@endauth  
+
+@auth
+@if (auth()->user()->level=="admin")
+<form action="/tambah" method="POST">
+@csrf
+<center>
+<div class="buatkategori" style="margin: 0 auto">
+    <h2 class="display-6 fw-bold">Tambah Kategori</h2>    
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationServer01">Nama Paket</label>
+            <input type="text" class="form-control is-valid" id="validationServer01" name="paket" placeholder="Nama Kategori "  required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationServer02">Harga Paket</label>
+            <input type="text" class="form-control is-valid" id="validationServer02" name="harga" placeholder="Harga Paket"  required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationServer02">Keterangan Paket</label>
+            <input type="text" class="form-control is-valid" id="validationServer02" name="keterangan" placeholder="KeteranganPaket"  required>
+        </div>
+      </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
+</center>  
+@endif
+@endauth
 
 
 @endsection
