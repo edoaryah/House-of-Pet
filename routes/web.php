@@ -10,6 +10,8 @@ use App\Http\Controllers\UlasanController;
 use App\Http\Controllers\AntrianController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\CommentsController;
+
 
 /*
 |--------------------------------------------------------------------------
