@@ -28,9 +28,11 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+Route::get('/', [HomeController::class,'index']);
 
 Route::get('/ulasan', [UlasanController::class,'readUlasanCsv']);
 

@@ -169,6 +169,30 @@
     </div>
 </section>
 
+<div class="ulasan">
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+      @foreach ($komen as $km)
+      <h4>
+        {{ $km['username'] }}
+      </h4>
+      <p>
+        {{ $km['comment'] }}
+      </p>
+      @endforeach
+    </div>
+  </div>
+
+  <style>
+    .ulasan {
+      background-color: coral;
+      width: 400px;
+      height: 300px;
+      border: 1px solid black;
+      overflow: auto;
+      margin: 0 auto;
+    }
+  </style>  
+
 <!-- ulasan -->
 <!-- <section id="ulasan">
     <div class="container">

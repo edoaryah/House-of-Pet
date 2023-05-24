@@ -25,13 +25,13 @@ class HomeController extends Controller
 
     public function index()
     {
-        $komen = [UlasanController::class,'readUlasanCsv'];
-        return redirect()->intended('/');
+        $komen = json_decode(file_get_contents(storage_path() . "/scrapedataminerig.json"), true);
+        return view('home', compact('komen'));
     }
 
-    public function testnavbar(){
-        return view('layouts.navbar');
-    }
+    // public function testnavbar(){
+    //     return view('layouts.navbar');
+    // }
 
     
 }
