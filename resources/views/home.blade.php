@@ -170,10 +170,10 @@
 </section>
 
 <!-- ulasan -->
-<section id="ulasan">
+<!-- <section id="ulasan">
     <div class="container">
         
     </div>
-</section>
+</section> -->
 
 @endsection
