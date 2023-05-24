@@ -18,7 +18,7 @@
                         {{-- Content --}}
                         <div class="">
                             <div class="">
-                                <a href="/posts/{{ $post->id }}">
+                                <a href="/post/{{ $post->id }}">
                                     <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">{{ $post->title }}</h3>
                                 </a>
                                 <p class="mt-3 text-base leading-6 text-gray-500">

@@ -1,10 +1,9 @@
 @extends('layouts.main')
 
-@section('content')
-
+@section('container')
 <div class="bg-gray-50 py-16 px-4 sm:grid sm:grid-cols-12">
     <div class="sm:col-start-4 sm:col-span-6">
-        <a href="/">
+        <a href="/forum">
             <div class="bg-white text-center px-4 py-3 rounded-sm shadow-sm hover:shadow-md">Back</div>
         </a>
 
@@ -26,10 +25,6 @@
                 </div>
             </div>
 
-            <div class="mt-4 rounded-sm overflow-hidden">
-                <img class="w-full object-cover" src="https://images.unsplash.com/photo-1602526430780-782d6b1783fa?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="blog image">
-            </div>
-
             <h2 class="mt-6 text-4xl leading-10 tracking-tight font-bold text-gray-900 text-center">{{ $post->title }}</h2>
             <p class="mt-6 leading-6 text-gray-500">{{ $post->text }}</p>
         </div>
@@ -37,7 +32,7 @@
         <h2 class="mt-6 text-4xl leading-10 tracking-tight font-bold text-gray-900 text-center">Comments</h2>
 
         <div>
-            <form action="/posts/{{ $post->id }}/comments" method="POST" class="mb-0">
+            <form action="/post/{{ $post->id }}/comments" method="POST" class="mb-0">
                 @csrf
                 <label for="author" class="text-sm font-medium text-gray-700">Author</label>
                 <input type="text" name="author" class="mt-1 py-2 px-3 block w-full borded border-gray-400 rounded-md shadow-sm" value="{{ old('author')}}" required>
@@ -99,5 +94,4 @@
 
     </div>
 </div>
-
-@endsection
+  @endsection
