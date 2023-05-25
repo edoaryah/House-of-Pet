@@ -55,8 +55,8 @@
                 Hewan Kesayangan Anda
             </h1>
             <p class="text-white opacity-75">
-                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, <br class="d-none d-md-block" />
-                consectetur, adipisci velit...
+                Jika anda sibuk tidak perlu khawatir, <br class="d-none d-md-block" />
+                House of Pet tentu akan menemani anabul kesayangan anda
             </p>
             <div class="d-flex gap-3 mt-2 mt-lg-4">
                 <a href="/sebelumcheckout" class="btn bg-violet text-white rounded-pill px-4 shadow">Reservasi Grooming</a>
@@ -98,7 +98,7 @@
                     <img src="assets/img/layanan1.png" class="col-4 rounded-3" />
                     <div class="d-flex flex-column col-8 ms-3 ms-lg-0 detail mt-3 mt-md-0">
                         <h5 class="mt-lg-3">Pet Shop</h5>
-                        <p class="mt-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices.</p>
+                        <p class="mt-lg-2">Menyediakan berbagai produk berkualitas untuk anabul anda.</p>
                     </div>
                 </div>
             </div>
@@ -108,8 +108,8 @@
                 <div class="d-flex flex-row-reverse flex-md-row flex-lg-column">
                     <img src="assets/img/layanan2.png" class="col-4 rounded-3" />
                     <div class="d-flex flex-column col-8 ms-3 ms-lg-0 detail mt-3 mt-md-0">
-                        <h5 class="mt-lg-3">Veterinary Service</h5>
-                        <p class="mt-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices.</p>
+                        <h5 class="mt-lg-3">Veterinary</h5>
+                        <p class="mt-lg-2">Dokter hewan yang ahli, terpercaya dan siap menangani anabul anda.</p>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@
                     <img src="assets/img/layanan3.png" class="col-4 rounded-3" />
                     <div class="d-flex flex-column col-8 ms-3 ms-lg-0 detail mt-3 mt-md-0">
                         <h5 class="mt-lg-3">Pet Hotel</h5>
-                        <p class="mt-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices.</p>
+                        <p class="mt-lg-2">Anda dapat menitipkan anabul kesayangan anda untuk beberapa hari.</p>
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                     <img src="assets/img/layanan4.png" class="col-4 rounded-3" />
                     <div class="d-flex flex-column col-8 ms-3 ms-lg-0 detail mt-3 mt-md-0">
                         <h5 class="mt-lg-3">Grooming</h5>
-                        <p class="mt-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices.</p>
+                        <p class="mt-lg-2">Segala Tindakan dilakukan Kepada Anabul Kesayangan anda Untuk Menjaga Kesehatannya.</p>
                     </div>
                 </div>
             </div>
@@ -257,29 +257,41 @@
     </script>
 </section> -->
 
-<div class="ulasan">
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-        @foreach ($komen as $km)
-        <h4>
-            {{ $km['username'] }}
-        </h4>
-        <p>
-            {{ $km['comment'] }}
-        </p>
-        @endforeach
-    </div>
-</div>
 
-<style>
-    .ulasan {
-        background-color: coral;
-        width: 400px;
-        height: 300px;
-        border: 1px solid black;
-        overflow: auto;
-        margin: 0 auto;
-    }
-</style>
+<!-- ulasan -->
+<section id="ulasan">
+    <h2>TESTIMONI DARI CUSTOMER KAMI</h2>
+    <div class="ulasan">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+            @foreach ($komen as $km)
+            <h4>
+                {{ $km['username'] }}
+            </h4>
+            <p>
+                {{ $km['comment'] }}
+            </p>
+            @endforeach
+        </div>
+    </div>
+    <style>
+
+        #ulasan h2 {
+            text-align: center;
+        }
+        #ulasan {
+            padding: 0;
+        }
+
+        .ulasan {
+            background-color: coral;
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: auto;
+            margin: 0 auto;
+        }
+    </style>
+</section>
 
 <!-- ulasan -->
 <!-- <section id="ulasan">
