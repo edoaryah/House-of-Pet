@@ -93,7 +93,7 @@
                 </div>
                 <button type="submit">Login</button>
                 <div class="register">
-                    <p>Don't have account? <a href="#">Register</a></p>
+                    <p>Don't have account? <a href="/register">Register Now</a></p>
                 </div>
             </form>
         </div>

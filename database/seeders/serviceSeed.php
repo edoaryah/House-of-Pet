@@ -17,32 +17,63 @@ class serviceSeed extends Seeder
     public function run(): void
     {
        Service::create([
-            'paket' => 'Paket Kering',
+            'paket' => 'Paket Kering (Kucing)',
             'harga' => 25000,
             'keterangan' => 'Kering Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
         ]);
 
         Service::create([
-            'paket' => 'Paket Sehat',
+            'paket' => 'Paket Sehat (Kucing)',
             'harga' => 60000,
             'keterangan' => 'Sehat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
         ]);
 
         Service::create([
-            'paket' => 'Paket Preventif',
+            'paket' => 'Paket Preventif (Kucing)',
             'harga' => 70000,
             'keterangan' => 'Preventif Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
         ]);
 
         Service::create([
-            'paket' => 'Paket Kutu',
+            'paket' => 'Paket Kutu (Kucing)',
             'harga' => 70000,
             'keterangan' => 'Kutu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
         ]);
 
         Service::create([
-            'paket' => 'Paket Jamur',
+            'paket' => 'Paket Jamur (Kucing)',
             'harga' => 90000,
+            'keterangan' => 'Jamur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
+        ]);
+
+        // ANJING
+        Service::create([
+            'paket' => 'Paket Kering (Anjing)',
+            'harga' => 35000,
+            'keterangan' => 'Kering Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
+        ]);
+
+        Service::create([
+            'paket' => 'Paket Sehat (Anjing)',
+            'harga' => 70000,
+            'keterangan' => 'Sehat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
+        ]);
+
+        Service::create([
+            'paket' => 'Paket Preventif (Anjing)',
+            'harga' => 80000,
+            'keterangan' => 'Preventif Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
+        ]);
+
+        Service::create([
+            'paket' => 'Paket Kutu (Anjing)',
+            'harga' => 90000,
+            'keterangan' => 'Kutu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
+        ]);
+
+        Service::create([
+            'paket' => 'Paket Jamur (Anjing)',
+            'harga' => 100000,
             'keterangan' => 'Jamur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at maximus quam. Curabitur cursus urna mauris, ',
         ]);
 
