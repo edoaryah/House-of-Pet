@@ -2,6 +2,50 @@
 
 @section('container')
 
+<!-- running text -->
+<section id="run">
+    <div class="contener">
+        <div class="group">
+            <p class="text">PET GROOMING SERVICES - Melayani Jasa Grooming Kucing & Anjing - Grooming Panggilan - Memanjakan & Memandikan Peliharaan Kesayangan Kamu - Merawat Kucing & Anjing Kesayangan</p>
+        </div>
+    </div>
+    <style>
+        #run {
+            padding: 0;
+        }
+
+        .group {
+            position: relative;
+            height: 30px;
+            overflow: hidden;
+            color: #fff;
+            background-color: #E11299;
+            border-bottom: 2px solid #E11299;
+            border-top: 2px solid #E11299;
+        }
+
+        .group .text {
+            position: absolute;
+            margin: 5px 0;
+            padding: 0;
+            width: max-content;
+            animation: my-animation 24s linear infinite;
+        }
+    </style>
+    <script>
+        var style = document.createElement('style');
+        var position = 'right';
+
+        style.innerHTML = `
+        @keyframes my-animation{
+            0%{ ${position}: -${document.querySelector('.text').offsetWidth + 10}px;}
+            100%{${position}: 100%;}
+        }`;
+
+        document.head.append(style);
+    </script>
+</section>
+
 <!-- hero -->
 <section id="hero-section">
     <div class="container">
@@ -168,6 +212,50 @@
         </div>
     </div>
 </section>
+
+<!-- running text -->
+<!-- <section id="run">
+    <div class="contener">
+        <div class="group">
+            <p class="text">PET GROOMING SERVICES - Melayani Jasa Grooming Kucing & Anjing - Grooming Panggilan - Memanjakan & Memandikan Peliharaan Kesayangan Kamu - Merawat Kucing & Anjing Kesayangan</p>
+        </div>
+    </div>
+    <style>
+        #run {
+            padding: 0;
+        }
+
+        .group {
+            position: relative;
+            height: 30px;
+            overflow: hidden;
+            color: #fff;
+            background-color: #E11299;
+            border-bottom: 2px solid #E11299;
+            border-top: 2px solid #E11299;
+        }
+
+        .group .text {
+            position: absolute;
+            margin: 5px 0;
+            padding: 0;
+            width: max-content;
+            animation: my-animation 24s linear infinite;
+        }
+    </style>
+    <script>
+        var style = document.createElement('style');
+        var position = 'right';
+
+        style.innerHTML = `
+        @keyframes my-animation{
+            0%{ ${position}: -${document.querySelector('.text').offsetWidth + 10}px;}
+            100%{${position}: 100%;}
+        }`;
+
+        document.head.append(style);
+    </script>
+</section> -->
 
 <div class="ulasan">
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
