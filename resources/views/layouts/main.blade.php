@@ -44,6 +44,7 @@
                         @endif
                         @endauth
                         <a href="/antrian">Antrian</a>
+                        <a href="/forum">Community</a>
                         @auth
                         @if (auth()->user()->level=="user")
                         <a href="/invoice">Invoice</a>
