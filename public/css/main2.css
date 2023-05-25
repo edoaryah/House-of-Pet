@@ -36,7 +36,8 @@ html, body {
 }
 
 section {
-    padding: 50px 0 100px;
+    /* awalnya 100px */
+    padding: 50px 0 50px;
 }
 
 .bg-violet {

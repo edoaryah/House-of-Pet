@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="/css/main2.css">
     <link href="https://fonts.cdnfonts.com/css/maleantes-tres-d" rel="stylesheet">
 
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
     <!-- Page title -->
     <title>House of Pet | Home</title>
 </head>
