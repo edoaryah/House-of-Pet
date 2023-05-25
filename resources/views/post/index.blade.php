@@ -33,7 +33,7 @@
                             <div class="mt-6 flex items-center">
                                 {{-- Bagian Bawah --}}
                                 <div class="ml-3">
-                                    <p class="text-sm leading-5 font-medium ">User : {{ $post->user }}</p>
+                                    <p class="text-sm leading-5 font-medium ">User : {{ $post->author }}</p>
                                     <div class="flex text-sm leading-5 text-gray-500">
                                         <time datetime="{{ $post->created_at }}">
                                             {{ $post->created_at}}

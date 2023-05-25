@@ -12,6 +12,7 @@ class PostsRequest extends FormRequest
         return [
             'title' => ['required', 'string', 'min:5', 'max:255'],
             'text'  => ['required', 'string', 'min:5'],
+            'author'=> ['required', 'string', 'min:4'],
         ];
     }
 }
