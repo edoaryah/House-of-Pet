@@ -9,8 +9,12 @@
         {{-- Posts Wrapper --}}
         <div class="">
                 <div class="container">
+                    <div class="py-3 ">
+                        <a href="/post/new" class="py-1 px-2 border border-2 border-black bg-success  rounded-2  shadow-lg overflow-hidden text-body text-decoration-none link-black" style="-webkit-text-fill-color: white">Buat Baru</a>
+                    </div>
                     @foreach ($post as $post)
                     {{-- Post --}}
+
                     <div class="border border-2 border-black rounded-2  shadow-lg overflow-hidden " style="margin-bottom: 60px">
                         {{-- Content --}}
                         <div class="ms-3">

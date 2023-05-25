@@ -7,11 +7,14 @@
         <div class="bg-white shadow-sm mt-5 p-6 rounded-md">
             <form action="/post" method="POST" class="mb-0">
                 @csrf
+                <label for="user" class="block text-sm font-medium text-gray-700">User</label>
+                <input type="text" name="user" class="mt-1 py-2 px-3 block w-full border border-gray-400 rounded-md shadow-sm" value={{ old('user') }} autofocus required>
+
                 <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
                 <input type="text" name="title" class="mt-1 py-2 px-3 block w-full border border-gray-400 rounded-md shadow-sm" value={{ old('title') }} autofocus required>
 
                 <label for="text" class="mt-6 block text-sm font-medium text-gray-700">Text</label>
-                <textarea name="text" class="mt-1 py-2 px-3 block w-full border border-gray-400 rounded-md shadow-sm" required>{{ old('text') }}</textarea>
+                <textarea name="text" class="mt-1 py-2 px-3 block w-full border border-gray-400 rounded-md shadow-sm" required>{{ old('text') }}autofocus</textarea>
 
                 @if($errors->any())
                     <div class="mt-6">

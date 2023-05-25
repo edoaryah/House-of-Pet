@@ -35,7 +35,9 @@ class PostsController extends Controller
 
         $post = new Post();
         $post->title = $data['title'];
-        $post->text  = $data['text'];
+        $post->text  = $data['text']; 
+        $post->user  = $data['author']; 
+
         $post->save();
 
         return redirect('/post/'.$post->id);
