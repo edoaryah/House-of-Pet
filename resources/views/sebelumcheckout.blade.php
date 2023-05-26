@@ -108,6 +108,29 @@
     <button class="btn btn-primary" type="submit">Submit</button>
   </form>
 </div>
+
+<div class="tampil">
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama Paket</th>
+            <th scope="col">Harga</th>
+            <th scope="col">Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach($semua as $sm)
+          <tr>
+            <th scope="row">{{ $sm->id }}</th>
+            <td>{{ $sm->paket }}</td>
+            <td>{{ $sm->harga }}</td>
+            <td>{{ $sm->keterangan }}</td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
+</div>
 </center>  
 @endif
 @endauth
