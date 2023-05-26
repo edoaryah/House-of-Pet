@@ -9,7 +9,9 @@ class KategoriController extends Controller
 {
     public function index()
     {
-        return view('/sebelumcheckout');
+        return view('/sebelumcheckout',[
+            'semua' => Service::all()
+       ]);
     }
 
     public function makeKategori(Request $request)
