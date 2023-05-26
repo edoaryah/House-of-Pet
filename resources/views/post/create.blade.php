@@ -7,10 +7,21 @@
         <div class="ms-5 border py-3 rounded-5 shadow col-md-15" >
             <form action="/post" method="POST" class="mb-3 px-5">
                 @csrf
+                @auth
+                @if(auth()->user()->level=="user" || auth()->user()->level=="admin")
+                <div class="mb-3 col-md-6 ">
+                    <div class="mb-3 fw-semibold"><label for="author" class="">Author</label></div>
+                    <input type="text" name="author"  class="shadow-sm form-control py-2 px-3 form-text border rounded" readonly value='{{ Auth::user()->name }}' required >
+                </div>
+                @endauth
+                @else
                 <div class="mb-3 col-md-6 ">
                     <div class="mb-3 fw-semibold"><label for="author" class="">Author</label></div>
                     <input type="text" name="author" placeholder="Isi Nama anda" class="shadow-sm form-control py-2 px-3 form-text border rounded" value='{{ old('author') }}'  required >
                 </div>
+                @endif
+                
+
                 <div class="mb-3 col-md-6 ">
                     <div class="mb-3 fw-semibold"><label for="title" class="">Title</label></div>
                     <input type="text" name="title" placeholder="Isi inti dari pertanyaan anda" class="shadow-sm form-control mt-1 py-2 px-3 border form-text rounded" value='{{ old('title') }}' required >

@@ -28,12 +28,19 @@
             <div>
                 <form action="/post/{{ $post->id }}/comments" method="POST" class="mb-0">
                     @csrf
-    
+                    @auth
+                    @if(auth()->user()->level=="user" || auth()->user()->level=="admin")
+                    <div class="mb-1 col-md-6">
+                        <div class="mb-1"><label for="author" class="">Author</label></div>
+                        <input type="text" name="author" readonly class="form-control mt-1 py-2 px-3  border  rounded shadow-sm" placeholder="Isi nama anda" value="{{ Auth::user()->name}}" required>
+                    </div>
+                    @endauth
+                    @else
                     <div class="mb-1 col-md-6">
                         <div class="mb-1"><label for="author" class="">Author</label></div>
                         <input type="text" name="author" class="form-control mt-1 py-2 px-3  border  rounded shadow-sm" placeholder="Isi nama anda" value="{{ old('author')}}" required>
                     </div>
-    
+                    @endif
                     <div class="mb-3 col-md-6">
                         <div class="mb-1"><label for="author" class="mt-6 ">Text</label></div>
                         <textarea name="text" class="form-control mt-1 py-2 px-3 border rounded shadow-sm" placeholder="isi nama anda" required>{{ old('text') }}</textarea>
