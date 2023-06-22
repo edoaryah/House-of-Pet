@@ -60,7 +60,7 @@
             </p>
             <div class="d-flex gap-3 mt-2 mt-lg-4">
                 <a href="/sebelumcheckout" class="btn bg-violet text-white rounded-pill px-4 shadow">Reservasi Grooming</a>
-                <a href="#" class="btn border-violet text-white rounded-pill px-4 shadow">Detail Layanan</a>
+                <a href="/about" class="btn border-violet text-white rounded-pill px-4 shadow">Tentang Kami</a>
             </div>
         </div>
     </div>
@@ -259,7 +259,7 @@
 
 
 <!-- ulasan -->
-<section id="ulasan">
+<!-- <section id="ulasan">
     <h2>TESTIMONI DARI CUSTOMER KAMI</h2>
     <div class="ulasan">
         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
@@ -291,7 +291,7 @@
             margin: 0 auto;
         }
     </style>
-</section>
+</section> -->
 
 <!-- ulasan -->
 <!-- <section id="ulasan">

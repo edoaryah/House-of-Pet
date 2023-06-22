@@ -90,7 +90,7 @@
 @csrf
 <center>
 <div class="buatkategori" style="margin: 0 auto">
-    <h2 class="display-6 fw-bold">Tambah Kategori</h2>    
+    <h2 class="display-6 fw-bold">Tambah Paket Pelayanan</h2>    
     <div class="form-row">
         <div class="col-md-4 mb-3">
             <label for="validationServer01">Nama Paket</label>
@@ -110,6 +110,7 @@
 </div>
 
 <div class="tampil">
+<h2 class="display-6 fw-bold">Semua Paket Pelayanan</h2>  
     <table class="table">
         <thead class="thead-light">
           <tr>

@@ -31,7 +31,7 @@
         @csrf
         <div class="form-group  col-sm-4">
           <div class="input-group date">
-            <label for="date" class="col-form-label">Pilih Hari : </label>
+            <label for="date" class="col-form-label"></label>
             <input type="date" class="form-control" id="date" name="date">
             <button type="submit" class="btn btn-primary">SUBMIT</button>
           </div>

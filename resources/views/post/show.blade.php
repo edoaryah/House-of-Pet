@@ -24,7 +24,8 @@
             </div>
     
             <h2 class="mt-5 text-center">Comments</h2>
-    
+            @auth
+            @if (auth()->user()->level=="admin")
             <div>
                 <form action="/post/{{ $post->id }}/comments" method="POST" class="mb-0">
                     @csrf
@@ -59,6 +60,9 @@
                     <button type="submit" class="mb-3 btn btn-primary mt-6 py-2 px-4 w-full border border-transparent  font-medium focus:outline-none">Post</button>
                 </form>
             </div>
+            @endif
+            @endauth
+            
             {{-- komentar --}}
             <div class="mt-6">
                 @foreach ($comments as $comment)

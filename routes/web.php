@@ -27,7 +27,7 @@ use App\Http\Controllers\CommentsController;
 Route::get('/ulasan', [UlasanController::class,'readUlasanCsv']);
 
 Route::get('/about', function () {
-    return view('about');
+    return view('aboutfix');
 });
 
 // Route::get('/', function () {
