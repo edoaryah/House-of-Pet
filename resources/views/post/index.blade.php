@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<section>
+<section style="background: #fbe7e7">
     <div class="">
         <div class="text-center">
             <h1 class="">House of Pet Community Support</h1>
@@ -10,14 +10,14 @@
         <div class="">
                 <div class="container">
                     <div class="py-3 ">
-                        <a href="/post/new" class="py-1 px-2 border border-2 border-black bg-success  rounded-2  shadow-lg overflow-hidden text-body text-decoration-none link-black" style="-webkit-text-fill-color: white">Buat Baru</a>
+                        <a href="/post/new" class="py-1 px-2 border border-1 border-black bg-success  rounded-2  shadow-lg overflow-hidden text-body text-decoration-none link-black" style="-webkit-text-fill-color: white">Buat Baru</a>
                     </div>
                     @foreach ($post as $post)
                     {{-- Post --}}
 
-                    <div class="border border-2 border-black rounded-2  shadow-lg overflow-hidden " style="margin-bottom: 60px">
+                    <div class="border border-1  border-dark rounded-2  shadow-lg overflow-hidden mb-5" style="background: #FFEAEA" >
                         {{-- Content --}}
-                        <div class="ms-3">
+                        <div class="ms-3" >
                             <div class="">
                                 <a href="/post/{{ $post->id }}" class="text-body text-decoration-none link-black">
                                     <h3 class="mt-2 fw-bolder">{{ $post->title }}</h3>
@@ -47,5 +47,9 @@
                 </div>
         </div>
     </div>
+    <style> 
+        
+    </style>
 </section>
 @endsection
+
