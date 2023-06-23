@@ -14,33 +14,36 @@ Sistem informasi antrian grooming bertujuan untuk memberikan layanan pendaftaran
 
 ## Instalasi
 
-1. Buka Terminal
-2. 
+1. Buka Terminal atau Git Bash
+2. Clone Source Code
 ```bash
 Git Clone https://github.com/edoaryah/houseofpet_fix.git
 ```
-3. 
+3. Ketik perintah
 ```bash
 cd laravel-starter
 ```
-4.
+4. Kemudian, ketik perintah
 ```bash
 cp .env.example .env
 ```
 
-5. Buka .env dan perbarui DB_DATABASE ke database yang dinginkan
+5. Buka .env dan perbarui DB_DATABASE ke database yang dinginkan misal houseofpetDB
+```php
+DB_DATABASE=houseofpetDB
+```
 
-6. 
+6. Kemudian, ketik perintah
 ```bash
 composer install
 ```
-7.
+7. Kemudian, ketik perintah
 ```bash
 php artisan key:generate
 ```
-8.
+8. Kemudian, ketik perintah
 ```bash
-php artisan migrate:fresh
+php artisan migrate:fresh --seed --seeder=serviceSeed
 ```
 
 9. Copy kode ini di .env
@@ -50,7 +53,14 @@ MIDTRANS_CLIENT_KEY=SB-Mid-client-0SbmlEBXbmJZhvir
 MIDTRANS_SERVER_KEY=SB-Mid-server-CQpVm2l2c3mTY4s0zy-ZzGl1
 MIDTRANS_IS_PRODUCTION=false
 ```
-10.
+10. Kemudian, ketik perintah dan copy juga jalankan sesuai url yang ditampilkan 
 ```bash
 php artisan serve
 ```
+11. Untuk login sebagai admin menggunakan 
+id : admin@gmail.com
+pass : admin123
+
+Untuk login sebagai pengguna menggunakan *misal
+id : cahyo@gmail.com
+pass : 123123123

@@ -26,7 +26,7 @@ class InvoiceController extends Controller
     {
         $dataAntrian = DB::table('antrians')->select('id')->count();
         $dataAntrianBaru = $dataAntrian + 1; 
-        $databarubaru = $dataAntrianBaru + 12000 - 1;
+        $databarubaru = $dataAntrianBaru + 17500 - 1;
         // $tanggalNow = Carbon::now()->format('Y/m/d');
         // @dd($tanggalNow); 
         $newDate = Carbon::now()->addDays(1)->format('Y/m/d');
