@@ -5,10 +5,10 @@ Sistem informasi antrian grooming bertujuan untuk memberikan layanan pendaftaran
 ## Anggota Kelompok
 
 **[Allegra Guruh]**
-**[Catur Wulan] **
-**[Chamzal Noer H] **
-**[Edo Arya H] **
-**[Rizky Satria P] **
+**[Catur Wulan]**
+**[Chamzal Noer H]**
+**[Edo Arya H]**
+**[Rizky Satria P]**
 
 ## Instalasi
 
