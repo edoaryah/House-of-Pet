@@ -24,49 +24,48 @@
                     <p class="mt-5">Pertanyaan : {{ $post->text }}</p>
                 </div>
     
-                <h2 class="mt-5 text-center">Comments</h2>
+            <h2 class="mt-5 text-center">Comments</h2>
     
-                <div>
-                    <form action="/post/{{ $post->id }}/comments" method="POST" class="mb-0">
-                        @csrf
-                        @auth
-                        @if(auth()->user()->level=="admin")
-                            <div class="mb-1 col-md-6">
-                                <div class="mb-1"><label for="author" class="">Author</label></div>
-                                <input type="text" name="author" readonly class="form-control mt-1 py-2 px-3  border  rounded shadow-sm" placeholder="Isi nama anda" value="{{ Auth::user()->name}}" required>
-                            </div>
-                            
-                            <div class="mb-1 col-md-6">
-                                <div class="mb-1"><label for="author" class="">Author</label></div>
-                                <input type="text" name="author" class="form-control mt-1 py-2 px-3  border  rounded shadow-sm" placeholder="Isi nama anda" value="{{ old('author')}}" required>
-                            </div>
-                            <div class="mb-3 col-md-6">
-                                <div class="mb-1"><label for="author" class="mt-6 ">Text</label></div>
-                                <textarea name="text" class="form-control mt-1 py-2 px-3 border rounded shadow-sm" placeholder="isi nama anda" required>{{ old('text') }}</textarea>
-                            </div>
-        
-                            @if ($errors->any())
-                                <div class="mt-1">
-                                    <ul class=" px-4 py-5 roundend">
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-        
-                            <button type="submit" class="mb-3 btn btn-primary mt-6 py-2 px-4 w-full border border-transparent  font-medium focus:outline-none">Post</button>
-                        
-                        @endif
-                        @endauth    
-                    </form>
-                </div>
-                {{-- komentar --}}
-                <div class="mt-6">
-                    @foreach ($comments as $comment)
-                        <div class="border mb-5  px-4 py-6 rounded shadow-sm">
-                            <div class="flex">
-                                {{-- Avatar --}}
+            <div>
+                <form action="/post/{{ $post->id }}/comments" method="POST" class="mb-0">
+                    @csrf
+                    @auth
+                    @if(auth()->user()->level=="user" || auth()->user()->level=="admin")
+                    <div class="mb-1 col-md-6">
+                        <div class="mb-1"><label for="author" class="">Author</label></div>
+                        <input type="text" name="author" readonly class="form-control mt-1 py-2 px-3  border  rounded shadow-sm" placeholder="Isi nama anda" value="{{ Auth::user()->name}}" required>
+                    </div>
+                    @endauth
+                    @else
+                    <div class="mb-1 col-md-6">
+                        <div class="mb-1"><label for="author" class="">Author</label></div>
+                        <input type="text" name="author" class="form-control mt-1 py-2 px-3  border  rounded shadow-sm" placeholder="Isi nama anda" value="{{ old('author')}}" required>
+                    </div>
+                    @endif
+                    <div class="mb-3 col-md-6">
+                        <div class="mb-1"><label for="author" class="mt-6 ">Text</label></div>
+                        <textarea name="text" class="form-control mt-1 py-2 px-3 border rounded shadow-sm" placeholder="isi nama anda" required>{{ old('text') }}</textarea>
+                    </div>
+    
+                    @if ($errors->any())
+                        <div class="mt-1">
+                            <ul class=" px-4 py-5 roundend">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+    
+                    <button type="submit" class="mb-3 btn btn-primary mt-6 py-2 px-4 w-full border border-transparent  font-medium focus:outline-none">Post</button>
+                </form>
+            </div>
+            {{-- komentar --}}
+            <div class="mt-6">
+                @foreach ($comments as $comment)
+                    <div class="border mb-5  px-4 py-6 rounded shadow-sm">
+                        <div class="flex">
+                            {{-- Avatar --}}
     
                                 <div class="flex flex-col d-flex justify-content-between">
                                     <p class="mr-1 font-bold">User : {{ $comment->author }}</p>
